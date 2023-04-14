@@ -59,7 +59,7 @@ export default function SignUpForm() {
   return (
     <div className="sign-up-container">
       <h2>Don't have an account?</h2>
-      <h1>Sign up with email and password</h1>
+      <h3>Sign up with email and password</h3>
       <form onSubmit={handleSubmit}>
         <FormInput
           label="Display Name"
