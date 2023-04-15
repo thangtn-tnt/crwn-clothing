@@ -1,21 +1,26 @@
+import "./navigation.styles.scss";
+import { ReactComponent as CrwnLogo } from "../../assets/crown.svg";
+
 import { useContext } from "react";
 import { Link, Outlet } from "react-router-dom";
 
-import CrwnLogo from "../../assets/crown.svg";
+import CartIcon from "../../components/cart-icon/cart-icon.component";
+import CartDropdown from "../../components/cart-dropdown/cart-dropdown.component";
+
 import { UserContext } from "../../contexts/user.context";
+import { CartContext } from "../../contexts/cart.context";
 
 import { signOutUser } from "../../utils/firebase/firebase-utils";
 
-import "./navigation.styles.scss";
-
 export default function Navigation() {
   const { currentUser, setCurrentUser } = useContext(UserContext);
+  const { isCartOpen } = useContext(CartContext);
 
   return (
     <>
       <div className="navigation">
         <Link className="logo-container" to="/">
-          <img src={CrwnLogo} className="logo" alt="Crwn Clothing" />
+          <CrwnLogo className="logo" />
         </Link>
         <div className="nav-links-container">
           <Link className="nav-link" to="/shop">
@@ -30,7 +35,9 @@ export default function Navigation() {
               SIGN IN
             </Link>
           )}
+          <CartIcon />
         </div>
+        {isCartOpen && <CartDropdown />}
       </div>
       <Outlet />
     </>
