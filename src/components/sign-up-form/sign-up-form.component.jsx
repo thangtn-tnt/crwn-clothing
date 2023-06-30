@@ -5,14 +5,14 @@ import Button from "../button/button.component";
 import "./sign-up-form.styles.scss";
 import {
   createAuthUserWithEmailAndPassword,
-  createUserDocumentFromAuth,
-} from "../../utils/firebase/firebase-utils";
+  createUserDocumentFromAuth
+} from "../../utils/firebase/firebase.utils";
 
 const defaultFormFields = {
   displayName: "",
   email: "",
   password: "",
-  confirmPassword: "",
+  confirmPassword: ""
 };
 
 export default function SignUpForm() {

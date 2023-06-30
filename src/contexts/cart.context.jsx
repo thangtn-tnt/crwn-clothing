@@ -47,7 +47,7 @@ export const CartContext = createContext({
   removeItemFromCart: () => {},
   clearCartItem: () => {},
   cartCount: 0,
-  cartTotal: 0,
+  cartTotal: 0
 });
 
 export const CartProvider = ({ children }) => {
@@ -94,7 +94,7 @@ export const CartProvider = ({ children }) => {
     clearItemFromCart,
     cartItems,
     cartCount,
-    cartTotal,
+    cartTotal
   };
 
   return <CartContext.Provider value={value}>{children}</CartContext.Provider>;

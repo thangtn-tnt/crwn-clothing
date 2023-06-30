@@ -10,15 +10,15 @@ import { CartProvider } from "./contexts/cart.context";
 import "./index.scss";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <UserProvider>
-        <CategoriesProvider>
-          <CartProvider>
-            <App />
-          </CartProvider>
-        </CategoriesProvider>
-      </UserProvider>
-    </BrowserRouter>
-  </React.StrictMode>
+  // <React.StrictMode>
+  <BrowserRouter>
+    <UserProvider>
+      <CategoriesProvider>
+        <CartProvider>
+          <App />
+        </CartProvider>
+      </CategoriesProvider>
+    </UserProvider>
+  </BrowserRouter>
+  // </React.StrictMode>
 );

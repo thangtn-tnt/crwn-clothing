@@ -1,14 +1,14 @@
 import { useState } from "react";
 
 import FormInput from "../form-input/form-input.component";
-import Button from "../button/button.component";
+import Button, { BUTTON_TYPES_CLASSES } from "../button/button.component";
 
 import "./sign-in-form.styles.scss";
-import { signInAuthUserWithEmailAndPassword } from "../../utils/firebase/firebase-utils";
+import { signInAuthUserWithEmailAndPassword } from "../../utils/firebase/firebase.utils";
 
 const defaultFormFields = {
   email: "",
-  password: "",
+  password: ""
 };
 
 export default function SignInForm() {
@@ -69,12 +69,10 @@ export default function SignInForm() {
           required
         />
         <div className="buttons-container">
-          <Button buttonType="inverted" type="submit">
-            Sign In
-          </Button>
-          {/* <Button buttonType="google" type="button" onClick={signInWithGoogle}>
+          <Button type="submit">Sign In</Button>
+          <Button buttonType={BUTTON_TYPES_CLASSES.google} type="button">
             Google sign in
-          </Button> */}
+          </Button>
         </div>
       </form>
     </div>
