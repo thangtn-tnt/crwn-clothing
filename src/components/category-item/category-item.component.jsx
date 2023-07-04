@@ -14,7 +14,7 @@ export default function CategoryItem({ category }) {
 
   return (
     <CategoryItemContainer onClick={onNavigateHandler}>
-      <BackgroundImage image={imageUrl}></BackgroundImage>
+      <BackgroundImage $image={imageUrl}></BackgroundImage>
       <Body>
         <h2>{title}</h2>
         <p>SHOP NOW</p>
