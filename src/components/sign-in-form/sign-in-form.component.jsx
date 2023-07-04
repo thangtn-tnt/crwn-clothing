@@ -34,7 +34,6 @@ export default function SignInForm() {
           alert("user doesn't exist");
           break;
         default:
-          console.log(error);
           break;
       }
     }
